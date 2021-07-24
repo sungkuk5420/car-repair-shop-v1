@@ -4,7 +4,7 @@
     background: white;
     &::before,
     &::after{
-        border-width: 1px;
+        border-width: 1px !important;
         border-color:$primary;
         border-radius: 0;
     }

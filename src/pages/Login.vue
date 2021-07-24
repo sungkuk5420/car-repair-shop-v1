@@ -75,7 +75,12 @@ export default {
     }
   }
   .login-checkbox{
+    margin-left: -0.6em;
     .q-checkbox__inner:not(.q-checkbox__inner--truthy){
+      .q-checkbox__bg{
+        border-width: 1px;
+        border-color:$primary;
+      }
       .q-checkbox__bg{
         background:white;
       }
