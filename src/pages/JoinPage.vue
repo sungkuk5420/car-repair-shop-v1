@@ -1,0 +1,173 @@
+<template>
+  <q-page class="column flex justify-start items-center join-page">
+    <div class="header full-width flex">
+      <div class="header-left" @click="movePage('/')">
+        <img src="~assets/images/join_top_04.jpg" alt="" srcset="">
+      </div>
+      <div class="header-center">
+        <img src="~assets/images/join_top.jpg" alt="" srcset="">
+      </div>
+    </div>
+    <div class="content flex flex-center col-12">
+      <div class="form-box">
+        <div class="form-row">
+          <div class="form-label">
+            아이디
+          </div>
+          <div class="form-content">
+            <q-input placeholder="휴대폰번호 11자리" class="id-input" outlined v-model="id" :dense="dense" />
+            <q-btn class="col-12 id-check" flat >중복확인</q-btn>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-label">
+            비밀번호
+          </div>
+          <div class="form-content">
+            <q-input password class="password-input" outlined v-model="password" :dense="dense" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-label">
+            비밀번호 확인
+          </div>
+          <div class="form-content">
+            <q-input password class="password-input" outlined v-model="password2" :dense="dense" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-label">
+            약관 동의
+          </div>
+          <div class="form-content">
+            <q-checkbox v-model="checkBox1" label="이용약관에 동의합니다." color="negative" />
+          </div>
+        </div>
+        <div class="form-row" style="margin-top:-7px">
+          <div class="form-label"></div>
+          <div class="form-content">
+            <q-checkbox v-model="checkBox2" label="개인정보 수집에 동의합니다." color="negative" />
+          </div>
+        </div>
+        <div class="flex justify-center q-mt-lg join-row">
+          <q-btn class="col-12 join-button" flat @click="movePage('/join')">간단 회원가입</q-btn>
+        </div>
+      </div>
+    </div>
+  </q-page>
+</template>
+
+<script>
+import ComputedMixin from "../ComputedMixin";
+import UtilMethodMixin from "../UtilMethodMixin";
+export default {
+  mixins: [ComputedMixin, UtilMethodMixin],
+  data(){
+    return{
+      dense:true,
+      id:"",
+      password:"",
+      password2:"",
+      checkBox1:false,
+      checkBox2:false,
+    }
+  },
+  mounted() {
+    // this.showLoading();
+  },
+};
+</script>
+
+<style lang="scss">
+.join-page{
+  background:$pageBgColor;
+  width: 100%;
+  .header{
+    z-index: 1;
+    background: white;
+    &-left{
+      position: absolute;
+      img{
+        width:45%;
+      }
+    }
+    &-center{
+      width: 100%;
+      img{
+        width:100%;
+      }
+    }
+  }
+  .content{
+    position: absolute;
+    top:0;
+    padding: 0 3vw;
+    padding-top:20vw;
+    width: 100%;
+    height:100%;
+    align-items: flex-start;
+    .form-box{
+      border:1px solid #cecece;
+      background: white;
+      width: 100%;
+    }
+  }
+  .id-check{
+    background: $negative;
+    color: white;
+    margin-left: 10px;
+  }
+  .form-row{
+    display:flex;
+    flex:0;
+    &:first-child{
+      margin-top: 20px;
+    }
+    &:not(:first-child){
+      margin-top: 10px;
+    }
+    .form-label{
+      padding-right: 10px;
+      align-items: center;
+      display: flex;
+      justify-content: flex-end;
+      flex:1;
+    }
+    .form-content{
+      display: flex;
+      flex:2.6;
+      padding-right: 10px;
+      .q-field{
+        width: 100%;
+      }
+    }
+  }
+
+  .q-checkbox{
+    margin-left: -0.6em;
+    .q-checkbox__inner:not(.q-checkbox__inner--truthy){
+      .q-checkbox__bg{
+        border-width: 1px;
+        border-color:$primary;
+      }
+      .q-checkbox__bg{
+        background:white;
+      }
+    }
+  }
+  
+  .join-row{
+    margin-top: 50px;;
+    margin-bottom: 100px;;
+  }
+  .join-button{
+    background:$negative;
+    color:white;
+    width:90%;
+    .q-btn__content{
+      color:white;
+      font-weight: bold;
+    }
+  }
+}
+</style>

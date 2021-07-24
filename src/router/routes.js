@@ -7,6 +7,13 @@ const routes = [
       { path: '', component: () => import('src/pages/Login.vue') }
     ]
   },
+  {
+    path: '/join',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('src/pages/JoinPage.vue') }
+    ]
+  },
 
   // Always leave this as last one,
   // but you can also remove it

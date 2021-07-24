@@ -1,6 +1,9 @@
 import { mapGetters } from "vuex";
 let UtilMethodMixin = {
     methods: {
+        movePage(pageName) {
+            this.$router.push(pageName);
+        },
         showLoading() {
             this.$q.loading.show();
         },

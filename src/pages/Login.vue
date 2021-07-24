@@ -16,7 +16,7 @@
       <q-checkbox class="login-checkbox" v-model="loginCheck" label="자동 로그인 설정" color="negative" />
     </div>
     <div class="flex items-start full-width">
-      <q-btn class="col-12 join-button full-width" flat >간단 회원가입</q-btn>
+      <q-btn class="col-12 join-button full-width" flat @click="movePage('/join')">간단 회원가입</q-btn>
     </div>
   </q-page>
 </template>
