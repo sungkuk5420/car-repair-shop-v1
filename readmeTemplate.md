@@ -1,6 +1,7 @@
-# car-repair-shop-v1
+# 3D Web Game
 
-공업사 앱 버전 1입니다.2014년 진행했던 프로젝트를 다시 복구하였습니다.
+Three.js 를 사용해 3D 웹게임을 만들어보았습니다.
+스마트폰, 태블릿, PC등에서 플레이 가능합니다.
 
 ## Demo / 데모
 
@@ -19,7 +20,7 @@ npm install
 ### Run / 실행
 
 ```
-quasar dev
+node app.js
 ```
 
 ## License / 라이센스
