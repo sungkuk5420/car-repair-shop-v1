@@ -2,10 +2,13 @@
   <q-page class="column flex justify-start items-center join-page">
     <div class="header full-width flex">
       <div class="header-left" @click="movePage('/')">
-        <img src="~assets/images/join_top_04.jpg" alt="" srcset="">
+        <q-btn
+          :icon="$q.platform.is.ios ? 'arrow_back_ios' : 'arrow_back_ios'"
+          flat
+        />
       </div>
       <div class="header-center">
-        <img src="~assets/images/join_top.jpg" alt="" srcset="">
+        회원가입
       </div>
     </div>
     <div class="content flex flex-center col-12">
@@ -85,17 +88,28 @@ export default {
   .header{
     z-index: 1;
     background: white;
+    position: relative;
     &-left{
       position: absolute;
-      img{
-        width:45%;
+      height:50px;
+      display: flex;
+      .q-btn{
+        margin-top:auto;
+        margin-bottom:auto;
+        i{
+          color:#cc0706;
+        }
       }
     }
     &-center{
       width: 100%;
-      img{
-        width:100%;
-      }
+      display: flex;
+      height:50px;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 20px;
+      border-bottom: 3px solid #cc0706;
     }
   }
   .content{
