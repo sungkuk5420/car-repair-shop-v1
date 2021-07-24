@@ -83,6 +83,9 @@ export default {
 
 <style lang="scss">
 .join-page{
+  max-width: 375px;
+  margin-left: auto;
+  margin-right: auto;
   background:$pageBgColor;
   width: 100%;
   .header{
@@ -115,8 +118,8 @@ export default {
   .content{
     position: absolute;
     top:0;
-    padding: 0 3vw;
-    padding-top:20vw;
+    padding: 0 13px;
+    padding-top:70px;
     width: 100%;
     height:100%;
     align-items: flex-start;
@@ -178,6 +181,7 @@ export default {
     background:$negative;
     color:white;
     width:90%;
+    height:50px;
     .q-btn__content{
       color:white;
       font-weight: bold;

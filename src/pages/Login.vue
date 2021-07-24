@@ -42,6 +42,9 @@ export default {
 
 <style lang="scss">
 .login-page{
+  max-width: 375px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0 20px;
   background:$pageBgColor;
   width: 100%;
