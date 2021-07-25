@@ -2,6 +2,7 @@
   <q-page class="column flex justify-start items-center main-page">
 
     <Footer></Footer>
+    <Header></Header>
   </q-page>
 </template>
 
@@ -9,9 +10,10 @@
 import ComputedMixin from "../ComputedMixin";
 import UtilMethodMixin from "../UtilMethodMixin";
 import Footer from "../components/Footer.vue";
+import Header from "../components/Header.vue";
 export default {
   mixins: [ComputedMixin, UtilMethodMixin,Footer],
-  components:{Footer},
+  components:{Footer,Header},
   data(){
     return{
       dense:true,
