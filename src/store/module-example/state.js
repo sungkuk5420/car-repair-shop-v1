@@ -1,5 +1,3 @@
-export default function() {
-  return {
-    state: ""
-  };
+export default {
+  centerTab: "info"
 }

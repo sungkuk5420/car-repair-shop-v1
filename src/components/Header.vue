@@ -1,14 +1,14 @@
 <template>
   <div class="header">
-    <div class="header-button button-1" :class="activeTab=='button-1'?'is-active':''">
+    <div class="header-button button-1" @click="()=>{changeCenterTab('info')}" :class="centerTab=='info'?'is-active':''">
       <div class="header-effect"></div>
         공업소 정보
     </div>
-    <div class="header-button button-2" :class="activeTab=='button-2'?'is-active':''">
+    <div class="header-button button-2" @click="()=>{changeCenterTab('repair-contents')}" :class="centerTab=='repair-contents'?'is-active':''">
       <div class="header-effect"></div>
         장비 기계 소개
     </div>
-    <div class="header-button button-3" :class="activeTab=='button-3'?'is-active':''">
+    <div class="header-button button-3" @click="()=>{changeCenterTab('call')}" :class="centerTab=='call'?'is-active':''">
       <div class="header-effect"></div>
         긴급 전화
     </div>
@@ -16,11 +16,17 @@
 </template>
 
 <script>
+import { T } from "../store/module-example/types";
 export default {
+  props:["centerTab"],
   name: 'Header',
   data () {
     return {
-      activeTab:"button-1"
+    }
+  },
+  methods:{
+    changeCenterTab(tabName){
+      this.$store.dispatch(T.CHANGE_CENTER_TAB,tabName);
     }
   }
 }

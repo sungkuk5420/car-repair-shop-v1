@@ -1,4 +1,4 @@
 export const T = {
-    TYPE: "TYPE"
+    CHANGE_CENTER_TAB: "CHANGE_CENTER_TAB"
   };
   

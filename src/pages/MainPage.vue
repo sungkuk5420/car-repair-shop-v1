@@ -1,8 +1,7 @@
 <template>
   <q-page class="column flex justify-start items-center main-page">
-
+    <Header :centerTab="centerTab"></Header>
     <Footer></Footer>
-    <Header></Header>
   </q-page>
 </template>
 

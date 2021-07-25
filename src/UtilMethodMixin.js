@@ -1,4 +1,3 @@
-import { mapGetters } from "vuex";
 let UtilMethodMixin = {
     methods: {
         movePage(pageName) {

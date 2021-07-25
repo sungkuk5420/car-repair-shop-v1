@@ -1,7 +1,7 @@
 import { T } from "./types";
 
 export const mutations = {
-  [T.TYPE](state, data) {
-    state.data = data;
+  [T.CHANGE_CENTER_TAB](state, data) {
+    state.centerTab = data;
   }
 };

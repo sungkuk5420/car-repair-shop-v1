@@ -1,5 +1,5 @@
 export const getters = {
-    getState(state) {
-        return state;
+    getCenterTab(state) {
+        return state.centerTab;
     },
 };

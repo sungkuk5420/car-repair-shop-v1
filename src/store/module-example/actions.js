@@ -19,9 +19,14 @@ export const actions = {
       }
     );
   },
-  [T.ACTION]({ commit }, { data }) {
-    console.log(`store action [T.ACTION] data`);
+  [T.CHANGE_CENTER_TAB]({ commit }, data ) {
+    console.log(`store CHANGE_CENTER_TAB [T.CHANGE_CENTER_TAB] data`);
     console.log(data);
-    commit(T.ACTION, data);
+    commit(T.CHANGE_CENTER_TAB, data);
+  },
+  [T.TYPES]({ commit }, { data }) {
+    console.log(`store TYPES [T.TYPES] data`);
+    console.log(data);
+    commit(T.TYPES, data);
   }
 };
