@@ -82,6 +82,7 @@ export default {
     &.repair-contents{
       padding:0 10px;
       padding-top: 60px;
+      overflow: auto;
     }
     .logo{
       margin-top: 0px;
