@@ -3,10 +3,7 @@
     <Header :centerTab="centerTab"></Header>
     <div class="container" v-show="centerTab=='info'">
       <div class="logo">
-        <img src="~assets/images/logo-2.png" alt="" srcset="">
-      </div>
-      <div class="icons">
-        <img src="~assets/images/center-icons.png" alt="" srcset="">
+        <img src="~assets/images/main_bg.jpg" alt="" srcset="">
       </div>
       <div class="flex justify-center q-mt-lg call-row">
         <q-btn class="col-12 call-button" flat >전화 상담하기</q-btn>
@@ -87,21 +84,15 @@ export default {
       padding-top: 60px;
     }
     .logo{
-      margin-top: 40px;
-      img{
-        width: 100%;
-      }
-    }
-    .icons{
-      margin-top: 20px;
+      margin-top: 0px;
       img{
         width: 100%;
       }
     }
 
     .call-row{
-      margin-top: 50px;;
-      margin-bottom: 100px;;
+      margin-top: 20px;
+      margin-bottom: 100px;
     }
     .call-button{
       background:$negative;

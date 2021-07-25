@@ -28,6 +28,13 @@ const routes = [
       { path: '', component: () => import('src/pages/CenterPage.vue') }
     ]
   },
+  {
+    path: '/event',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('src/pages/EventPage.vue') }
+    ]
+  },
 
   // Always leave this as last one,
   // but you can also remove it
