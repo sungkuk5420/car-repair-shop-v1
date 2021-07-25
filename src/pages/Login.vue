@@ -9,7 +9,7 @@
           <q-input placeholder="비밀번호" class="password q-mt-sm" outlined v-model="password" :dense="dense" />
       </div>
       <div class="flex column form-right q-ml-sm">
-        <q-btn class="col-12 login-button" flat >로그인</q-btn>
+        <q-btn class="col-12 login-button" flat @click="movePage('/main')">로그인</q-btn>
       </div>
     </div>
     <div class="flex items-start full-width">
