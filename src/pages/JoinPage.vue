@@ -136,7 +136,7 @@ export default {
   }
   .form-row{
     display:flex;
-    flex:0;
+    flex:none;
     &:first-child{
       margin-top: 20px;
     }

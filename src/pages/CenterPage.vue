@@ -12,7 +12,8 @@
         <q-btn class="col-12 call-button" flat >전화 상담하기</q-btn>
       </div>
     </div>
-    <div class="container" v-show="centerTab=='repair-contents'">
+    <div class="container repair-contents" v-show="centerTab=='repair-contents'">
+      <RepairContent v-for="(conetent,index) in repairContents" :key="index" :data="conetent"></RepairContent>
     </div>
     <Footer></Footer>
   </q-page>
@@ -23,9 +24,10 @@ import ComputedMixin from "../ComputedMixin";
 import UtilMethodMixin from "../UtilMethodMixin";
 import Footer from "../components/Footer.vue";
 import Header from "../components/Header.vue";
+import RepairContent from "../components/RepairContent.vue";
 export default {
-  mixins: [ComputedMixin, UtilMethodMixin,Footer],
-  components:{Footer,Header},
+  mixins: [ComputedMixin, UtilMethodMixin, Footer, RepairContent],
+  components:{Footer,Header,RepairContent},
   data(){
     return{
       dense:true,
@@ -34,27 +36,27 @@ export default {
       password:"",
       repairContents:[
         {
-          image:"title",
+          image:"images/center1.jpg",
           title:"엔진오일 퍼포먼스 장비",
           content:"엔진오일을 교환할 경우에는 엔진속에 숨어있는 폐유 (300~800ml)를 제거한후에 신유를 주입하므로 엔진오일 교환효과를 극대화하여 완벽한 오일교환을 하실 수 있습니다."
         },
         {
-          image:"",
+          image:"images/center2.jpg",
           title:"타이어 교환 및 관리 정비",
           content:"엔진오일을 교환할 경우에는 엔진속에 숨어있는 폐유 (300~800ml)를 제거한후에 신유를 주입하므로 엔진오일 교환효과를 극대화하여 완벽한 오일교환을 하실 수 있습니다."
         },
         {
-          image:"",
+          image:"images/center3.jpg",
           title:"브레이크 관리 정비",
           content:"엔진오일을 교환할 경우에는 엔진속에 숨어있는 폐유 (300~800ml)를 제거한후에 신유를 주입하므로 엔진오일 교환효과를 극대화하여 완벽한 오일교환을 하실 수 있습니다."
         },
         {
-          image:"",
+          image:"images/center4.jpg",
           title:"엔진 및 엔진 플러그 정비",
           content:"엔진오일을 교환할 경우에는 엔진속에 숨어있는 폐유 (300~800ml)를 제거한후에 신유를 주입하므로 엔진오일 교환효과를 극대화하여 완벽한 오일교환을 하실 수 있습니다."
         },
         {
-          image:"",
+          image:"images/center5.jpg",
           title:"에어컨 및 차량 공조대 정비",
           content:"엔진오일을 교환할 경우에는 엔진속에 숨어있는 폐유 (300~800ml)를 제거한후에 신유를 주입하므로 엔진오일 교환효과를 극대화하여 완벽한 오일교환을 하실 수 있습니다."
         },
@@ -78,13 +80,20 @@ export default {
     display: flex;
     flex:1;
     height: 100%;
-    padding-top: 100px;
+    padding-top: 60px;
     flex-direction: column;
+    &.repair-contents{
+      padding:0 10px;
+      padding-top: 60px;
+    }
+    .logo{
+      margin-top: 40px;
+      img{
+        width: 100%;
+      }
+    }
     .icons{
       margin-top: 20px;
-    }
-    .logo,
-    .icons{
       img{
         width: 100%;
       }
