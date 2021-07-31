@@ -1,12 +1,6 @@
 <template>
   <q-page class="column flex justify-start items-center estimate-page">
     <div class="header full-width flex">
-      <div class="header-left" @click="movePage('/')">
-        <q-btn
-          :icon="$q.platform.is.ios ? 'arrow_back_ios' : 'arrow_back_ios'"
-          flat
-        />
-      </div>
       <div class="header-center">
         견적 요청
       </div>

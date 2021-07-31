@@ -8,10 +8,10 @@
       <div class="header-effect"></div>
         장비 기계 소개
     </div>
-    <div class="header-button button-3" @click="()=>{changeCenterTab('call')}" :class="centerTab=='call'?'is-active':''">
+    <!-- <div class="header-button button-3" @click="()=>{changeCenterTab('call')}" :class="centerTab=='call'?'is-active':''">
       <div class="header-effect"></div>
         긴급 전화
-    </div>
+    </div> -->
   </div>
 </template>
 
