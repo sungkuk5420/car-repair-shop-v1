@@ -12,10 +12,24 @@
       </div>
     </div>
     <div class="content">
+
+      <q-uploader
+        url="http://localhost:4444/upload"
+        label="견적 참고 이미지 첨부하기"
+        class="uploader q-mb-md"
+        multiple
+        batch
+        flat
+        square
+        bordered
+        color="negative"
+        style="width:100%; "
+        
+      />
       <q-editor
         v-model="editor"
         content-class="white"
-        toolbar-text-color="bloack"
+        toolbar-text-color="black"
         toolbar-toggle-color="white"
         toolbar-bg="white"
         :toolbar="[
@@ -109,5 +123,28 @@ export default {
     }
   }
 
+  .uploader{
+    .q-uploader__list{
+      display: flex;
+      .q-uploader__file{
+        flex:1;
+        margin-top:0;
+        margin:5px;
+        &--img{
+          height: 150px;
+          min-width: 150px;
+        }
+        .q-uploader__title{
+          height: 15px;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+      }
+    }
+    .q-uploader__header-content a.q-btn+a.q-btn,
+    .q-uploader__header-content a.q-btn:first-child{
+      display: none;
+    }
+  }
 }
 </style>
