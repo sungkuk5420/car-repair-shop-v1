@@ -39,7 +39,6 @@ export default {
     margin-right: auto;
     display: flex;
     width: 100%;
-    flex: 1;
     position: absolute;
     top: 0;
     &-button{

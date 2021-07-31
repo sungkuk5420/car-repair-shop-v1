@@ -12,15 +12,15 @@
         alt="" srcset=""
       />
     </div>
-    <div class="footer-button" @click="movePage('/main')">
+    <div class="footer-button" @click="movePage('/estimate')">
       <img class="button-image-2 off" 
         src="~assets/images/bot_menu.02_off.jpg" 
-        :class="footerTabName!=='main'?'is-active':''"
+        :class="footerTabName!=='estimate'?'is-active':''"
         alt="" srcset=""
       />
       <img class="button-image-2 on" 
         src="~assets/images/bot_menu.02_on.jpg" 
-        :class="footerTabName==='main'?'is-active':''"
+        :class="footerTabName==='estimate'?'is-active':''"
         alt="" srcset=""
       />
     </div>
@@ -77,8 +77,8 @@ export default {
       let returnValue = "";
       if(this.$router.currentRoute.path=="/main"){
         returnValue = "main";
-      } else if(this.$router.currentRoute.path=="/main"){
-        returnValue = "main";
+      } else if(this.$router.currentRoute.path=="/estimate"){
+        returnValue = "estimate";
       } else if(this.$router.currentRoute.path=="/event"){
         returnValue = "event";
       } else if(this.$router.currentRoute.path=="/center"){

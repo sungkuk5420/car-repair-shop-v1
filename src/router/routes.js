@@ -35,6 +35,13 @@ const routes = [
       { path: '', component: () => import('src/pages/EventPage.vue') }
     ]
   },
+  {
+    path: '/estimate',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('src/pages/EstimatePage.vue') }
+    ]
+  },
 
   // Always leave this as last one,
   // but you can also remove it
