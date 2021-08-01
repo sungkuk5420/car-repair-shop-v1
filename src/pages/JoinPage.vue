@@ -53,7 +53,7 @@
           </div>
         </div>
         <div class="flex justify-center q-mt-lg join-row">
-          <q-btn class="col-12 join-button" flat @click="movePage('/join')">간단 회원가입</q-btn>
+          <q-btn class="col-12 join-button" flat @click="movePage('/')">간단 회원가입</q-btn>
         </div>
       </div>
     </div>
