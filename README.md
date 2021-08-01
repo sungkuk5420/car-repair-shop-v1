@@ -4,7 +4,7 @@
 
 ## Demo / 데모
 
-[라이브 데모 보기](www.naver.com)
+[라이브 데모 보기](https://car-repair-shop-v1.netlify.app/#/)
 
 ## Getting Started / 어떻게 시작하나요?
 
