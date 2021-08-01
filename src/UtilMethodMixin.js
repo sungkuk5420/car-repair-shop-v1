@@ -1,6 +1,7 @@
 let UtilMethodMixin = {
     methods: {
         movePage(pageName) {
+            this.$emit('changed', pageName)
             this.$router.push(pageName);
         },
         showLoading() {

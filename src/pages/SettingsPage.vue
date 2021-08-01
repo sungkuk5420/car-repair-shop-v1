@@ -259,7 +259,7 @@
         </q-card-section>
       </q-card>
     </q-dialog>
-    <Footer></Footer>
+    <Footer @changed="clickedFooterMenu"></Footer>
   </q-page>
 </template>
 
@@ -323,6 +323,12 @@ export default {
       
         default:
           break;
+      }
+    },
+    clickedFooterMenu(valueName){
+      console.log(valueName)
+      if(valueName == "/settings"){
+        this.slide = 1;
       }
     }
   },

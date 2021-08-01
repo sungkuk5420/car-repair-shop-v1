@@ -101,7 +101,7 @@
     </q-carousel>
 
     
-    <Footer></Footer>
+    <Footer @changed="clickedFooterMenu"></Footer>
   </q-page>
 </template>
 
@@ -171,6 +171,12 @@ export default {
       console.log(currentContent)
       this.currentContent = currentContent;
       this.slide=2;
+    },
+    clickedFooterMenu(valueName){
+      console.log(valueName)
+      if(valueName == "/main"){
+        this.slide = 1;
+      }
     }
   },
 };
