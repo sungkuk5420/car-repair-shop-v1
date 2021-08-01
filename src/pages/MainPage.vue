@@ -83,6 +83,20 @@
             </div>
           </div>
         </div>
+
+        <div class="comments">
+          <div class="comment-row" v-for="(comment,index) in comments" :key="index" >
+            <div class="comment-row__user">
+              <div class="user">
+                {{comment.user}}
+              </div>
+              <div class="time">
+                {{comment.time}}
+              </div>
+            </div>
+            <div class="comment-row__content">{{comment.content}}</div>
+          </div>
+        </div>
       </q-carousel-slide>
     </q-carousel>
 
@@ -109,6 +123,18 @@ export default {
         time:"약 3시간",
         price:"350,000원",
       },
+      comments:[
+        {
+          user:"안낄낄",
+          time:"2014.06.15 17:09",
+          content:"해당 제품을 K3차량에도 설치할 수 있나요?"
+        },
+        {
+          user:"글쓴이",
+          time:"2014.06.15 21:49",
+          content:"네 가능합니다. "
+        },
+      ],
       mainContents:[
         {
           image:"images/home1.jpg",
@@ -273,7 +299,7 @@ export default {
     textarea{
       width: 100%;
       min-height: 80px;
-    border: 1px solid #bdbdbd;
+      border: 1px solid #bdbdbd;
     }
     &__submit-row{
       display: flex;
@@ -294,6 +320,46 @@ export default {
           font-weight: bold;
           color:white;
         }
+      }
+    }
+  }
+
+  .comments{
+    background: #f9f9f9;
+    flex:1;
+    .comment-row{
+      border:1px solid #bdbdbd;
+      border-top: 0;
+      padding: 10px;
+      &:last-child{
+        .user{
+          background: $negative;
+        }  
+      }
+      &__user{
+        display: flex;
+        width: 100%;
+        flex: 1;
+        .user{
+          min-width: 80px;
+          margin-right: 10px;
+          margin-bottom:10px;
+          color: white;
+          display: flex;
+          flex:0;
+          justify-content: center;
+          align-items:center;
+          font-weight: bold;
+          background: #323232;
+        }
+        .time{
+          color: #999999;
+        }
+      }
+      &__content{
+        color: black;
+        font-weight: bold;
+        margin-left: 3px;
       }
     }
   }
