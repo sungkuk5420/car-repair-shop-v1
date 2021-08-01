@@ -190,6 +190,7 @@ export default {
   background:$pageBgColor;
   width: 100%;
   flex-wrap: nowrap;
+  padding-bottom: 60px;
   .scroll-container{
     width:100%;
     padding: 10px;

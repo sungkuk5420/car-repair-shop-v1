@@ -84,6 +84,7 @@ export default {
       padding:0 10px;
       padding-top: 60px;
       overflow: auto;
+      padding-bottom: 60px;
     }
     .logo{
       margin-top: 0px;
