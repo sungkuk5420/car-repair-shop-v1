@@ -1,14 +1,16 @@
 <template>
-  <div class="main-content" >
+  <div class="main-content"  @click="()=>{$emit('handleClick', data)}">
     <div class="main-content-image" :style="`background-image:url(${imageData});`">
     </div>
     <div class="main-content-text">
       <div class="content">
         <div class="content-left">
-          <div class="title">
+          <div class="content-left__title">
             {{data.title}}
           </div>
-          {{data.content}}
+          <div class="content-left__content">
+            {{data.content}}
+          </div>
         </div>
         <div class="content-right">
           <div class="content-right-row">
@@ -45,6 +47,8 @@ export default {
     imageData () {
       return require('../assets/'+this.data.image)
     }
+  },
+  methods:{
   }
 }
 </script>
@@ -75,12 +79,6 @@ export default {
       flex:none;
       background: white;
       height:56px;
-      .title{
-        color:black;
-        font-weight: bold;
-        font-size: 16px;
-        line-height: 1;
-      }
       .content{
         color:#8d8d8d;
         font-size: 11px;
@@ -92,6 +90,15 @@ export default {
           flex:4;
           height:50%;
           font-size: 11px;
+          &__title{
+            color:black;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 1;
+          }
+          &__content{
+            white-space:nowrap;
+          }
         }
         &-right{
           flex:1.8;
