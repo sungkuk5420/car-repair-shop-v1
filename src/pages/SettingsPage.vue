@@ -459,8 +459,8 @@ export default {
   }
   .content.list-content{
     background: white;
+    overflow: auto;
     padding:0; 
-    padding-top:10px;
   }
   .q-list{
     padding: 0;
