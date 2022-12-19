@@ -1,5 +1,8 @@
 export const getters = {
-    getCenterTab(state) {
+    getCenterTab (state) {
         return state.centerTab;
+    },
+    getLoginUser (state) {
+        return state.loginUser;
     },
 };

@@ -1,16 +1,17 @@
+
 let UtilMethodMixin = {
     methods: {
-        movePage(pageName) {
+        movePage (pageName) {
             this.$emit('changed', pageName)
             this.$router.push(pageName);
         },
-        showLoading() {
+        showLoading () {
             this.$q.loading.show();
         },
-        hideLoading() {
+        hideLoading () {
             this.$q.loading.hide();
         },
-        successMessage(message) {
+        successMessage (message) {
             this.$q.notify({
                 position: "top",
                 timeout: 500,
@@ -18,7 +19,7 @@ let UtilMethodMixin = {
                 icon: "announcement"
             });
         },
-        errorMessage(message) {
+        errorMessage (message) {
             this.$q.notify({
                 position: "top",
                 timeout: 500,

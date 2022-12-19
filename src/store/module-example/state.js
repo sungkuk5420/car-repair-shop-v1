@@ -1,3 +1,4 @@
 export default {
-  centerTab: "info"
+  centerTab: "info",
+  loginUser: null
 }

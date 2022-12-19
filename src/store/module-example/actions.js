@@ -2,7 +2,7 @@ import { T } from "./types";
 import { ajaxActions } from "./ajaxActions";
 
 export const actions = {
-  [T.AJAX_ACTION]({ commit }, { data, cb }) {
+  [T.AJAX_ACTION] ({ commit }, { data, cb }) {
     console.log(`store action [T.AJAX_ACTION] joinUser = ${data}`);
     ajaxActions.joinUser(
       data,
@@ -19,14 +19,14 @@ export const actions = {
       }
     );
   },
-  [T.CHANGE_CENTER_TAB]({ commit }, data ) {
-    console.log(`store CHANGE_CENTER_TAB [T.CHANGE_CENTER_TAB] data`);
+  [T.CHANGE_CENTER_TAB] ({ commit }, data) {
+    console.log(`action CHANGE_CENTER_TAB [T.CHANGE_CENTER_TAB] data`);
     console.log(data);
     commit(T.CHANGE_CENTER_TAB, data);
   },
-  [T.TYPES]({ commit }, { data }) {
-    console.log(`store TYPES [T.TYPES] data`);
+  [T.LOGIN] ({ commit }, data) {
+    console.log(`action LOGIN [T.LOGIN] data`);
     console.log(data);
-    commit(T.TYPES, data);
+    commit(T.LOGIN, data);
   }
 };
