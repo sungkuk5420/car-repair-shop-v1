@@ -140,6 +140,7 @@
 import ComputedMixin from "../ComputedMixin";
 import UtilMethodMixin from "../UtilMethodMixin";
 import Footer from "../components/Footer.vue";
+import { T } from "../store/module-example/types";
 export default {
   mixins: [ComputedMixin, UtilMethodMixin],
   components: { Footer },
@@ -153,11 +154,16 @@ export default {
     }
   },
   methods: {
+    logout () {
+      this.$store.dispatch(T.LOGIN, null)
+      localStorage.setItem("loginCheck", false)
+      this.movePage(("/login"))
+    },
     action (index) {
       console.log(index)
       switch (index) {
         case 3: // 로그인
-          this.movePage("/login")
+          this.logout()
           break;
         case 4:
           this.slide = 2;

@@ -6,7 +6,8 @@
     <div class="form flex">
       <div class="flex column form-left">
         <q-input placeholder="아이디" class="id" outlined v-model="id" :dense="dense" />
-        <q-input placeholder="비밀번호" class="password q-mt-sm" outlined v-model="password" :dense="dense" />
+        <q-input placeholder="비밀번호" type="password" class="password q-mt-sm" outlined v-model="password"
+          :dense="dense" />
       </div>
       <div class="flex column form-right q-ml-sm">
         <q-btn class="col-12 login-button" flat @click="login">로그인</q-btn>
